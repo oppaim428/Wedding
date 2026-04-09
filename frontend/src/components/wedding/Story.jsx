@@ -1,7 +1,7 @@
 import React from 'react';
 import { motion } from 'framer-motion';
 
-const Story = ({ stories }) => {
+const Story = ({ stories, title = 'Love Story', subtitle = 'Our Journey' }) => {
   return (
     <section className="relative py-16 px-6" style={{ backgroundColor: '#f5f0e6' }}>
       {/* Noise overlay */}
@@ -21,13 +21,13 @@ const Story = ({ stories }) => {
           className="text-[10px] tracking-[0.4em] uppercase mb-3"
           style={{ fontFamily: 'Cinzel, serif', color: '#8a7a5e' }}
         >
-          Our Journey
+          {subtitle}
         </p>
         <h2
           className="text-2xl mb-4"
           style={{ fontFamily: '"Cinzel Decorative", serif', color: '#2c2417' }}
         >
-          Love Story
+          {title}
         </h2>
         <div className="flex items-center justify-center">
           <div className="h-px w-12 bg-[#c4a265]/30" />

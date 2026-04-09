@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { X, ChevronLeft, ChevronRight } from 'lucide-react';
 
-const Gallery = ({ images }) => {
+const Gallery = ({ images, title = 'Our Gallery', subtitle = 'Captured Moments' }) => {
   const [selectedIndex, setSelectedIndex] = useState(null);
 
   const openLightbox = (index) => setSelectedIndex(index);
@@ -32,13 +32,13 @@ const Gallery = ({ images }) => {
           className="text-[10px] tracking-[0.4em] uppercase mb-3"
           style={{ fontFamily: 'Cinzel, serif', color: '#8a7a5e' }}
         >
-          Captured Moments
+          {subtitle}
         </p>
         <h2
           className="text-2xl mb-4"
           style={{ fontFamily: '"Cinzel Decorative", serif', color: '#2c2417' }}
         >
-          Our Gallery
+          {title}
         </h2>
         <div className="flex items-center justify-center">
           <div className="h-px w-12 bg-[#c4a265]/30" />

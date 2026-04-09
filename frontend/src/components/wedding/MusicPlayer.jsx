@@ -2,13 +2,13 @@ import React, { useState, useRef, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { Volume2, VolumeX } from 'lucide-react';
 
-const MusicPlayer = () => {
+const MusicPlayer = ({ musicUrl }) => {
   const [isPlaying, setIsPlaying] = useState(false);
   const [showPrompt, setShowPrompt] = useState(true);
   const audioRef = useRef(null);
 
-  // Use a royalty-free wedding music URL (placeholder)
-  const musicUrl = 'https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3';
+  // Default music if none provided
+  const src = musicUrl || '';
 
   useEffect(() => {
     // Auto-hide the music prompt after 5 seconds
@@ -34,7 +34,7 @@ const MusicPlayer = () => {
 
   return (
     <>
-      <audio ref={audioRef} src={musicUrl} loop preload="none" />
+      <audio ref={audioRef} src={src} loop preload="none" />
 
       {/* Music toggle button */}
       <motion.button

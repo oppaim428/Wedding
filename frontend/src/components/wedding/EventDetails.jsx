@@ -8,7 +8,7 @@ const iconMap = {
   music: Music
 };
 
-const EventDetails = ({ events }) => {
+const EventDetails = ({ events, title = 'Wedding Events', subtitle = 'Join Us At' }) => {
   return (
     <section className="relative py-16 px-6" style={{ backgroundColor: '#faf7f0' }}>
       {/* Section header */}
@@ -23,13 +23,13 @@ const EventDetails = ({ events }) => {
           className="text-[10px] tracking-[0.4em] uppercase mb-3"
           style={{ fontFamily: 'Cinzel, serif', color: '#8a7a5e' }}
         >
-          Join Us At
+          {subtitle}
         </p>
         <h2
           className="text-2xl mb-4"
           style={{ fontFamily: '"Cinzel Decorative", serif', color: '#2c2417' }}
         >
-          Wedding Events
+          {title}
         </h2>
         <div className="flex items-center justify-center">
           <div className="h-px w-12 bg-[#c4a265]/30" />

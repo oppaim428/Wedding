@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { motion } from 'framer-motion';
 
-const Countdown = ({ date }) => {
+const Countdown = ({ date, title = 'Our Big Day', subtitle = 'Counting Down To' }) => {
   const [timeLeft, setTimeLeft] = useState({ days: 0, hours: 0, minutes: 0, seconds: 0 });
 
   useEffect(() => {
@@ -55,13 +55,13 @@ const Countdown = ({ date }) => {
           className="text-[10px] tracking-[0.4em] uppercase mb-3"
           style={{ fontFamily: '"Cinzel", serif', color: '#8B7355' }}
         >
-          Counting Down To
+          {subtitle}
         </p>
         <h2
           className="text-[22px]"
           style={{ fontFamily: '"Cinzel Decorative", serif', color: '#2c2417' }}
         >
-          Our Big Day
+          {title}
         </h2>
 
         {/* Ornamental divider */}
