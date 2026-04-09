@@ -32,27 +32,48 @@ const Countdown = ({ date }) => {
   ];
 
   return (
-    <section className="relative py-16 px-6" style={{ backgroundColor: '#faf7f0' }}>
+    <section
+      className="relative py-16 px-6 overflow-hidden"
+      style={{
+        background: 'linear-gradient(180deg, #f0e8d8 0%, #ebe3d1 50%, #f0e8d8 100%)'
+      }}
+    >
+      {/* Decorative pattern overlay */}
+      <div className="absolute inset-0 opacity-[0.03]" style={{
+        backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%238B7355' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`
+      }} />
+
       {/* Section title */}
       <motion.div
         initial={{ opacity: 0, y: 30 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.8 }}
-        className="text-center mb-10"
+        className="text-center mb-10 relative z-10"
       >
         <p
           className="text-[10px] tracking-[0.4em] uppercase mb-3"
-          style={{ fontFamily: 'Cinzel, serif', color: '#8a7a5e' }}
+          style={{ fontFamily: '"Cinzel", serif', color: '#8B7355' }}
         >
           Counting Down To
         </p>
         <h2
-          className="text-2xl"
+          className="text-[22px]"
           style={{ fontFamily: '"Cinzel Decorative", serif', color: '#2c2417' }}
         >
           Our Big Day
         </h2>
+
+        {/* Ornamental divider */}
+        <div className="flex items-center justify-center mt-4">
+          <div className="h-px w-10 bg-[#8B7355]/30" />
+          <svg width="20" height="12" viewBox="0 0 20 12" fill="none" className="mx-2">
+            <path d="M10 0L13 6L10 12L7 6L10 0Z" fill="#8B7355" fillOpacity="0.3" />
+            <path d="M0 6L3 3L6 6L3 9L0 6Z" fill="#8B7355" fillOpacity="0.2" />
+            <path d="M14 6L17 3L20 6L17 9L14 6Z" fill="#8B7355" fillOpacity="0.2" />
+          </svg>
+          <div className="h-px w-10 bg-[#8B7355]/30" />
+        </div>
       </motion.div>
 
       {/* Countdown grid */}
@@ -61,7 +82,7 @@ const Countdown = ({ date }) => {
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, margin: '-50px' }}
         transition={{ duration: 0.8, delay: 0.2 }}
-        className="grid grid-cols-4 gap-3 max-w-xs mx-auto"
+        className="grid grid-cols-4 gap-3 max-w-xs mx-auto relative z-10"
       >
         {timeUnits.map((unit, index) => (
           <motion.div
@@ -73,46 +94,38 @@ const Countdown = ({ date }) => {
             className="text-center"
           >
             <div
-              className="relative py-4 px-2 rounded-sm mb-2"
+              className="relative py-4 px-2 mb-2"
               style={{
-                backgroundColor: 'rgba(196, 162, 101, 0.08)',
-                border: '1px solid rgba(196, 162, 101, 0.2)'
+                backgroundColor: 'rgba(139, 115, 85, 0.06)',
+                border: '1px solid rgba(139, 115, 85, 0.15)',
+                borderRadius: '2px'
               }}
             >
+              {/* Corner ornaments */}
+              <div className="absolute top-0 left-0 w-2 h-2 border-t border-l border-[#8B7355]/25" />
+              <div className="absolute top-0 right-0 w-2 h-2 border-t border-r border-[#8B7355]/25" />
+              <div className="absolute bottom-0 left-0 w-2 h-2 border-b border-l border-[#8B7355]/25" />
+              <div className="absolute bottom-0 right-0 w-2 h-2 border-b border-r border-[#8B7355]/25" />
+
               <motion.span
                 key={unit.value}
-                initial={{ y: -10, opacity: 0 }}
+                initial={{ y: -8, opacity: 0 }}
                 animate={{ y: 0, opacity: 1 }}
                 transition={{ duration: 0.3 }}
-                className="text-2xl block"
-                style={{ fontFamily: '"Cinzel Decorative", serif', color: '#2c2417' }}
+                className="text-[24px] block"
+                style={{ fontFamily: '"Cinzel", serif', color: '#2c2417', fontWeight: 500 }}
               >
                 {String(unit.value).padStart(2, '0')}
               </motion.span>
             </div>
             <span
-              className="text-[9px] tracking-[0.2em] uppercase"
-              style={{ fontFamily: 'Cinzel, serif', color: '#8a7a5e' }}
+              className="text-[8px] tracking-[0.2em] uppercase"
+              style={{ fontFamily: '"Cinzel", serif', color: '#8B7355' }}
             >
               {unit.label}
             </span>
           </motion.div>
         ))}
-      </motion.div>
-
-      {/* Decorative divider */}
-      <motion.div
-        initial={{ scaleX: 0 }}
-        whileInView={{ scaleX: 1 }}
-        viewport={{ once: true }}
-        transition={{ duration: 1, delay: 0.5 }}
-        className="flex items-center justify-center mt-10"
-      >
-        <div className="h-px w-20 bg-gradient-to-r from-transparent to-[#c4a265]/30" />
-        <svg width="12" height="12" viewBox="0 0 12 12" fill="none" className="mx-2">
-          <path d="M6 0L7 5L12 6L7 7L6 12L5 7L0 6L5 5L6 0Z" fill="#c4a265" fillOpacity="0.35" />
-        </svg>
-        <div className="h-px w-20 bg-gradient-to-l from-transparent to-[#c4a265]/30" />
       </motion.div>
     </section>
   );

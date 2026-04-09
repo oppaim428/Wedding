@@ -1,70 +1,72 @@
 export const weddingData = {
   couple: {
-    bride: "Priya",
-    groom: "Arjun",
-    brideFullName: "Priya Sharma",
-    groomFullName: "Arjun Mehta",
-    hashtag: "#ArjunWedsPriya"
+    bride: "Manon",
+    groom: "Yassine",
+    brideFullName: "Manon Dupont",
+    groomFullName: "Yassine El Amrani",
+    hashtag: "#YassineAndManon"
   },
-  date: "2026-02-14T18:00:00",
-  tagline: "Together Forever",
+  date: "2026-05-27T18:00:00",
+  tagline: "We Are Getting Married",
   invitation: {
-    line1: "Together with their families",
-    line2: "Request the honour of your presence",
-    line3: "at the celebration of their marriage"
+    line1: "You are invited for our special day",
+    line2: "We are getting married",
+    line3: "Please join us to celebrate"
   },
+  openingVideo: "https://customer-assets.emergentagent.com/job_wooow-invites-fork/artifacts/di63cj2k_opening-animation-1775564002494.mp4",
+  heroBackground: "https://customer-assets.emergentagent.com/job_wooow-invites-fork/artifacts/9bnub1dk_Screenshot_20260409-084905_Chrome.jpg",
   story: [
     {
       id: 1,
       title: "How We Met",
-      date: "June 2020",
-      description: "It was at a friend's art exhibition in Mumbai where our eyes first met across the room. A shared love for impressionist paintings sparked a conversation that lasted until the gallery closed.",
+      date: "March 2021",
+      description: "It was a beautiful spring afternoon when our paths crossed at a café in Paris. A shared love for art and travel sparked a conversation that felt like it could last forever.",
       image: "https://images.unsplash.com/photo-1639330926658-2d8b2b584a88?w=400&h=400&fit=crop"
     },
     {
       id: 2,
       title: "First Date",
-      date: "August 2020",
-      description: "Our first official date was at a rooftop café overlooking the city skyline. Over cups of masala chai, we discovered we both dreamed of traveling the world together.",
+      date: "April 2021",
+      description: "Our first official date was a walk along the Seine at sunset. We talked for hours about our dreams, our families, and the little things that make life beautiful.",
       image: "https://images.unsplash.com/photo-1639330945576-8ce15e5920f2?w=400&h=400&fit=crop"
     },
     {
       id: 3,
       title: "The Proposal",
-      date: "December 2024",
-      description: "Under a sky full of stars at the Udaipur lake palace, Arjun got down on one knee. With tears of joy, Priya said yes to forever.",
+      date: "November 2025",
+      description: "Under a canopy of stars in Marrakech, Yassine got down on one knee with a ring that sparkled like the night sky. With tears of joy, Manon said yes to forever.",
       image: "https://images.unsplash.com/photo-1639331309653-5d3dc5e1486b?w=400&h=400&fit=crop"
     }
   ],
   events: [
     {
       id: 1,
-      title: "Mehendi Ceremony",
-      date: "February 12, 2026",
+      title: "Henna Ceremony",
+      date: "May 25, 2026",
       time: "4:00 PM Onwards",
-      venue: "The Heritage Courtyard",
-      address: "42 Palace Road, Jaipur, Rajasthan",
-      mapLink: "https://maps.google.com/?q=Jaipur+Palace+Road",
+      venue: "Riad Al Jazira",
+      address: "12 Rue de la Kasbah, Marrakech",
+      mapLink: "https://maps.google.com/?q=Marrakech+Riad",
       icon: "palette"
     },
     {
       id: 2,
       title: "Wedding Ceremony",
-      date: "February 14, 2026",
+      date: "May 27, 2026",
       time: "6:00 PM",
-      venue: "Royal Garden Lawns",
-      address: "18 Maharaja Avenue, Jaipur, Rajasthan",
-      mapLink: "https://maps.google.com/?q=Jaipur+Maharaja+Avenue",
+      venue: "La Mamounia Gardens",
+      address: "Avenue Bab Jdid, Marrakech",
+      mapLink: "https://maps.google.com/?q=La+Mamounia+Marrakech",
       icon: "heart"
     },
     {
       id: 3,
       title: "Reception",
-      date: "February 14, 2026",
+      date: "May 27, 2026",
       time: "8:30 PM Onwards",
-      venue: "Crystal Ballroom, The Oberoi",
-      address: "1 Grand Circle, Jaipur, Rajasthan",
-      mapLink: "https://maps.google.com/?q=Oberoi+Jaipur",
+      venue: "Royal Mansour Ballroom",
+      address: "Rue Abou Abbas El Sebti, Marrakech",
+      mapLink: "https://maps.google.com/?q=Royal+Mansour+Marrakech",
       icon: "music"
     }
   ],
@@ -78,7 +80,7 @@ export const weddingData = {
   ],
   rsvpQuestions: {
     title: "RSVP",
-    subtitle: "Kindly respond by January 15, 2026",
+    subtitle: "Kindly respond by April 15, 2026",
     fields: ["name", "email", "guests", "attending", "message"]
   },
   footer: {

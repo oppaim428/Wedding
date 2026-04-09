@@ -19,9 +19,9 @@ const InvitePage = () => {
 
   return (
     <div className="min-h-[100dvh] flex justify-center" style={{ backgroundColor: '#f5f0e6' }}>
-      {/* Opening Screen */}
+      {/* Opening Screen with video */}
       <OpeningScreen
-        couple={weddingData.couple}
+        videoSrc={weddingData.openingVideo}
         onOpen={handleOpen}
         isVisible={!isOpened}
       />
@@ -43,6 +43,7 @@ const InvitePage = () => {
           couple={weddingData.couple}
           date={weddingData.date}
           invitation={weddingData.invitation}
+          backgroundImage={weddingData.heroBackground}
         />
 
         <Countdown date={weddingData.date} />
