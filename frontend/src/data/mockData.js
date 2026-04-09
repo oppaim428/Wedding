@@ -14,7 +14,7 @@ export const weddingData = {
     line3: "Please join us to celebrate"
   },
   openingVideo: "https://customer-assets.emergentagent.com/job_wooow-invites-fork/artifacts/di63cj2k_opening-animation-1775564002494.mp4",
-  openingPoster: "https://customer-assets.emergentagent.com/job_wooow-invites-fork/artifacts/9ya22zc3_Screenshot_20260409-084854_Chrome.jpg",
+  openingPoster: "https://customer-assets.emergentagent.com/job_wooow-invites-fork/artifacts/t6uutbzt_1775719321162.png",
   heroBackground: "https://customer-assets.emergentagent.com/job_wooow-invites-fork/artifacts/9bnub1dk_Screenshot_20260409-084905_Chrome.jpg",
   story: [
     {
